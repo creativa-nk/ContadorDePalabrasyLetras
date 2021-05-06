@@ -4,34 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
     <title>Contador de letras  y palabras</title>
 </head>
 <body>
+    <script src="https://unpkg.com/css-doodle@0.15.3/css-doodle.min.js"></script>
+    <css-doodle class="doodle">
+        :doodle {
+            @grid: 20 / 100vmax; <!-- un grid 20 por20 ocupando 10% de la pantalla -->
+            grid-gap: 20px; 
+        }
+            background-color: tomato;
+            transform: scale(@rand(.1,.9)) translate3d(@r(50px),@r(100px),0);
+            <!-- la escala de los cubos min 1 max 9 aleatorio, 3d profundidad -->
+            background: hsla(@r(360), 85%, @r(70%,90%), @r(.9));
+            <!-- @rand o @r significa aleatorio y dentro() ponemos el valor maximo -->
+            border-radius:(@r(80%)); <!-- no funciona muy bien, no veo la diferencia -->
+            
+
+        animation: test infinite @r(10s, 15s) linear;
+ 
+        @keyframes test {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+            50% {
+                transform: translate3d(@r(-500%, 100%), @r(-500%, 100%), 0);
+            }
+            100% {
+                transform: translate3d(0, 0, 0);
+            }
+
+    </css-doodle>
     <div class="padre">
         <div class="hijo">
             <form id="formulario" method="post">
                 <div class="input">
                     <textarea id="area" rows="7" cols="45" style="width: 100%;" autofocus placeholder="Escribe texto"></textarea>
                  <!-- <input type="text" id="area" autofocus placeholder="Escribe texto"/> -->
+                </div>       
+                 <!-- <p id="parrafo">Vamos a ver si funciona contar palabras</p> -->
+                 <div class="bottonS">
+                    <div class="button"  onclick="contarPalabras();">Contar palabras </div>
+                    <div class="button" onclick="contarLetras();"> Contar letras </div>
                  </div>
-                 <br>        
-        
-          <!-- <p id="parrafo">Vamos a ver si funciona contar palabras</p> -->
-             <div class="button"  onclick="contarPalabras();"> Contar palabras </div> <br>
-             <div class="button" onclick="contarLetras();"> Contar letras </div>
-             <br>
+                
 
-             <p>Cantidad de palabras: <span id="resultadoPalabras"></span> </p>
-             <p>Cantidad de letras: <span id="resultadoLetras"></span></p> 
-             <!-- <p>Cantidad de simbolos: <span id="resultadoSimbolos"></span></p>  -->
+                <p>Cantidad de palabras: <span id="resultadoPalabras"></span> </p>
+                <p>Cantidad de letras: <span id="resultadoLetras"></span></p> 
+                  <!-- <p>Cantidad de simbolos: <span id="resultadoSimbolos"></span></p>  -->
 
-             <!-- <input class="resetBtn" type="reset" value="Limpiar" id="limpiar" name="btnLimpiar"/> -->
+                  <!-- <input class="resetBtn" type="reset" value="Limpiar" id="limpiar" name="btnLimpiar"/> -->
 
-             <div class="resetBtn" onclick="reset();">Limpiar</div>
+                <div class="resetBtn" onclick="reset();">Limpiar</div>
 
-             </form>
+            </form>
         </div>
     </div>
-    <script type="text/javascript" src="./JS/main.js"></script>
+<script type="text/javascript" src="./JS/main.js"></script>
 </body>
 </html>
