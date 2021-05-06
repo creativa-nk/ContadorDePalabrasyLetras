@@ -33,6 +33,10 @@ function contarPalabras(){
   texto = texto.replace (variosBlancos," ");
   texto = texto.replace (primerBlanco,"");
   texto = texto.replace (ultimoBlanco,"");
+  texto = texto.replace(",", " ");
+  texto = texto.replace(".", " ");
+  texto = texto.replace(":", "");
+  texto = texto.replace(";", "");
   texto = texto.replace (/\r?\n/g," ");    //Reemplazamos los espacios seguidos por uno solo
 
   /*function quitarAcentos(cadena){
@@ -51,6 +55,9 @@ function contarLetras(){
     var texto = texto.replace(",", "");   // para que no cuente la coma como letra usamos el .replace (cambiar coma por nada)
     var texto = texto.replace("!", "");
     var texto = texto.replace("?", "");
+    var texto = texto.replace(".", "");
+    var texto = texto.replace(":", "");
+    var texto = texto.replace(";", "");
 
    
 
