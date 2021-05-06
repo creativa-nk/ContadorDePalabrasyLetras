@@ -34,9 +34,10 @@ function contarPalabras(){
   texto = texto.replace (primerBlanco,"");
   texto = texto.replace (ultimoBlanco,"");
   texto = texto.replace(",", " ");
-  texto = texto.replace(".", " ");
+  texto = texto.replace(".", "");
   texto = texto.replace(":", "");
   texto = texto.replace(";", "");
+  texto = texto.replace("  ", " "); 
   texto = texto.replace (/\r?\n/g," ");    //Reemplazamos los espacios seguidos por uno solo
 
   /*function quitarAcentos(cadena){
