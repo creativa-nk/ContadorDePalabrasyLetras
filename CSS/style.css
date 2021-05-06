@@ -119,3 +119,39 @@ p{
 }
 
 
+
+@media only screen and (max-width: 1023px) {
+    html{
+        background-attachment: fixed; 
+    }
+}
+@media only screen and (max-width: 768px) {
+    html{
+        background-attachment: fixed;
+    }
+}
+@media only screen and (max-width: 450px) {
+
+    .hijo{
+        width: 75vw;
+    }
+
+    .button{
+       font-size: 0.7em;
+       padding: 2%;
+    }
+
+    p{
+        font-size: 0.8rem;
+    }
+
+    .resetBtn{
+        font-size: 0.8em;
+    }
+
+    #area{
+        font-size: 0.9em;
+    }
+}
+
+
