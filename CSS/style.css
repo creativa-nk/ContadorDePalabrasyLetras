@@ -2,22 +2,28 @@ body{
     height: 100vh;
     margin:0px;     /*  El navegador crea un margin por defecto de 8px, para borrarlo ponemos   margin:0px */
 }
+.doodle{
+    position: absolute;
+    z-index: -1;
+}
 
 body .padre{
-    background: rgb(95, 95, 94);
     width: 100%;
     height:inherit;
     display:flex;
     align-items: center;
     justify-content: center;
     min-height: 500px;
+    font-family: 'Quicksand', sans-serif;
 
 }
 
 .hijo{
-    background: rgb(86, 128, 245);
+    background: rgba(86, 128, 245, 0.575);
+    border-radius: 3px;
     width: 30vw;
-    height: 60vh;
+    height: auto;
+    box-shadow: 0 0 50px 0 rgba(36, 36, 36, 0.472);;
 }
 
 @media only screen and (max-width: 778px){
@@ -27,41 +33,56 @@ body .padre{
     }
    
 }
+.bottonS{
+    display: flex;
+    justify-content: space-between;
+}
 
 .button{
-    border: 2px solid #474747;
+    border: 1px solid #474747;
     background: rgb(6, 207, 207);
     height: 3vh;
     cursor: pointer;
-    min-height: 20px;
-    text-align: center;
+    min-height: 10px;
+    padding: 2% 12%;
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     border-radius: 6px;
-    color:rgb(46, 46, 46)  ;
+    color:rgb(46, 46, 46);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-top: 1em;
+    box-shadow: 2px 2px 4px rgb(3, 126, 126) ;
 }
 .button:hover{
-    color: rgb(236, 235, 235);
+    color: rgb(248, 248, 248);
     background-color:rgb(179, 179, 179);
+    box-shadow: 0px 0px 0px;
 }
 
 
 .resetBtn{
-    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5em;
     text-decoration: none;
-    font-size: 2.1rem;
+    font-size: 2rem;
     color: #ffffff;
     border-radius: 6px;
-    border: 3px solid #474747;
+    border: 1px solid #474747;
     background:rgb(139, 139, 139);
-    height: 5vh;
-    text-align: center;
+    height: 4vh;
     cursor: pointer;
+    box-shadow: 2px 2px 4px rgb(98, 98, 98) ;
 }
 
 .resetBtn:hover{
     color: #474747;
-    background-color:rgb(179, 179, 179); 
+    background-color:rgb(179, 179, 179);
+    box-shadow: 0px 0px 0px;
 }
 
 form{
@@ -73,15 +94,17 @@ form{
 
 p{
     text-align: left;
-    margin: 0.5rem;
+    margin: 1em 0;
     text-decoration: none;
     font-size: 1.2rem;
-
+    font-weight: bold;
 }
 
 #area{
+    border: none;
     height: 15vh;
     width: 50vw;
+    border-radius: 5px;
 }
 
 
