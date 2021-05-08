@@ -155,9 +155,10 @@ p{
         width: 70vw;
     }
     .button{
-        font-size: 1em;
+        font-size: 1.1em;
         width: 26vw;
         height: 5vh;
+        color: white;
      }
      #area{
         font-size: 1.2em;
