@@ -47,7 +47,7 @@ body .padre{
 }
 
 .button{
-    border: 1px solid #474747;
+    border: 1px solid #7a7a7a;
     background: rgb(6, 207, 207);
     height: 3vh;
     cursor: pointer;
@@ -84,7 +84,7 @@ body .padre{
     font-weight: bold;
     color: #ffffff;
     border-radius: 6px;
-    border: 1px solid #474747;
+    border: 1px solid #7a7a7a;
     background:rgb(139, 139, 139);
     padding: 0.5em;
     cursor: pointer;
@@ -143,7 +143,7 @@ p{
         width: 70vw;
     }
     .button{
-        font-size: 1.1em;
+        font-size: 1.2em;
         width: 26vw;
         height: 5vh;
      }
@@ -155,7 +155,7 @@ p{
         width: 70vw;
     }
     .button{
-        font-size: 1.1em;
+        font-size: 1.2em;
         width: 26vw;
         height: 5vh;
         color: white;
@@ -172,8 +172,8 @@ p{
     }
 
     .button{
-       font-size: 0.6em;
-       width: 26vw;
+       font-size: 0.7em;
+       width: 28vw;
        height: 5vh;
        font-weight: bolder;
        color: white;
@@ -190,6 +190,10 @@ p{
     #area{
         font-size: 0.9em;
     }
+    
+.hijo{
+  margin: 1em auto ;
+}
 }
 
 
