@@ -16,6 +16,7 @@ let contador = string => {
       return total;
   }, {});
 };
+// prueba PR dani
 //depositamos el resultado que retorna la funcion a una variable
 let resultado = contador(texto);
 console.log(resultado);*/
